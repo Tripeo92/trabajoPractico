@@ -268,7 +268,7 @@ form {
     margin-top: 1rem;
 }
 
-.inputBuscador{
+.inputBuscadorIndex{
     border: 2px solid white;
     border-radius: 25px;
     color: #000000;
@@ -280,7 +280,7 @@ form {
     width: 500px;
 }
 
-.botonBuscador{
+.botonBuscadorIndex{
     background-color:#9f3647;
     display: inline-block;
     color:#ffffff;
@@ -607,7 +607,7 @@ form{
     margin-bottom: 20px;
 }
 
-input:not(.check,.boton), select {
+.input:not(.check,.boton), select {
     width: 100%;
     margin-bottom: 10px;
     height: 40px;
@@ -635,6 +635,10 @@ option {
     margin-bottom: 10px;
 }
 
+.textoCheck{
+    margin-left: 10px;
+}
+
 .terminos {
     font-size: 0.8rem;
     display: flex;
@@ -652,7 +656,7 @@ input[type="checkbox" i] {
     border: initial;
 }
 
-input {
+/*.input {
     text-rendering: auto;
     color: fieldtext;
     letter-spacing: normal;
@@ -675,9 +679,9 @@ input {
     border-image: initial;
     padding-block: 1px;
     padding-inline: 2px;
-}
+}*/
 
-.boton {
+.botonIniciar {
     width: 87%;
     box-sizing: content-box;
     background-color: #9f3647;
@@ -723,7 +727,7 @@ input {
         text-align: center;
     }
 
-    input:not(.check,.boton){
+    .input:not(.check,.boton){
         width: 80%;
         height: 35px;
         font-size: 1rem;
