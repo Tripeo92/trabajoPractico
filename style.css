@@ -75,6 +75,10 @@ header {
         font-size: 1.2rem;
     }
 
+    nav{
+        display: block;
+        unicode-bidi: isolate;
+    }
 
     ul {
         display: block;
@@ -127,16 +131,12 @@ header {
 
     @media (max-width: 768px) {
 
-        .header {
+        .header{
             height: initial;
-
         }
 
-        nav{
-            display: block;
-            unicode-bidi: isolate;
-        }
-        .navegation {
+    
+        .navegation{
             margin-left: 10px;
             margin-right: 10px;
             flex-direction: column;
@@ -150,12 +150,7 @@ header {
 
         }
 
-        .barraNav {
-            padding: initial;
-
-        }
-
-        .barraItem .linkNav {
+        .barraItem{
             font-weight: 400;
             margin-right: initial;
             font-size: 1rem;
@@ -163,8 +158,13 @@ header {
 
         }
 
+        .linkNav {
+            font-weight: 400;
+            margin-right: initial;
+            font-size: 1rem;
+            padding: 0.2rem;
 
-
+        }
 
 
     }
@@ -527,35 +527,232 @@ img {
 }
 
 
-.listaItem {
-    margin-left: 20px;
-}
-
-
-.administradorPeliculas {
-    background-color: #181419;
-    color: white;
+.navbar-nav .nav-item {
+    --bs-nav-link-padding-x: 1.1rem;
+    --bs-nav-link-padding-y: 1.1rem;
+    --bs-nav-link-font-weight: 700;
+    --bs-nav-link-color: #ffffff;
+    --bs-nav-link-hover-color: none ;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: 700;
     padding: 0.5rem 1rem;
+    --bs-nav-link-disabled-color: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar-brand {
+    color:  #ffffff ;
+    font-family: 'Nunito', sans-serif;
+}
+
+.administrador{
+    
+        /* font-size: 1.1rem; */
+        /* text-decoration: none; */
+        background-color: #181419;
+        /* color: white; */
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+    
+}
+
+
+
+
+
+
+
+
+
+
+/*ESTILO PARA LA PAGINA DE REGISTRO*/
+
+.bodyRegistrarse{
+    height: 100vh;
+    background: linear-gradient(to right top, #24242473,#24242473),url(fondo/1155.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.headerRegistrarse {
+    color: #ffffff;
+    height: 8vh;
+    padding: 30px;
+}
+
+.seccionRegistrarse{
+    background-color:rgb(42, 42, 42);
+    width: 30%;
+    margin:0 auto;
     border-radius: 5px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-size:1.2rem;
 }
 
-.flechaArriba{
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    color: white;
-    cursor: pointer;
+form{
+    width: 100%;
+    padding: 40px;
 }
 
-.listaNav{
-    list-style: none;
+.tituloRegistrarse{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+input:not(.check,.boton), select {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid #9f3647;
+    background-color: #333333;
+    outline: none;
+    color: rgb(255, 255, 255);
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    white-space: nowrap;
+}
+
+.error-text {
+    color: #ff0000;
+    font-size: 0.8rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.terminos {
+    font-size: 0.8rem;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-.linkNav{
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+
+input {
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+.boton {
+    width: 87%;
+    box-sizing: content-box;
+    background-color: #9f3647;
+    border: 2px solid #9f3647;
+    color: #ffffff;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.ayuda {
+    margin-top: 40px;
+    font-size: 1rem;
     text-decoration: none;
-    color:#ffffff;
-    font-weight: 700;
-    font-size: 1.2rem;
+    color: #787878;
+    font-weight: 400;
+}
+
+
+/*media query para otros dispositivos pagina de registro*/
+
+@media (max-width: 1200px){
+    .headerRegistrarse{
+        padding: 120px;
+    }
+
+    .logo{
+        font-size: 1rem;
+    }
+
+    .seccionRegistrarse{
+        width: 95%;
+        padding: 10px 10px;
+    }
+
+    .tituloRegistrarse{
+        font-size: 2rem;
+    }
+
+    form{
+        width: 100%;
+        text-align: center;
+    }
+
+    input:not(.check,.boton){
+        width: 80%;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .terminos{
+        width: 80%;
+        margin:0 auto;
+        font-size: 0.7rem;
+    }
+    
+    .boton{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 70%;
+        padding: 0.8rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .ayuda{
+        text-align: left;
+        font-size: 0.8rem;
+    }
+
+    select{
+        width: 80%;
+        height: 35px;
+        font-size: 1rem;
+        text-align: center;
+    }
+    
 }
